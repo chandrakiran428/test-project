@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+ <meta charset="UTF-8">
+    <title>Infinite Impressions</title>
+</head>
+<body>
+<div class="container">
+		<div class="row">
+			<div class = "container justify-content-center card">
+				<h2 class="text">Adding New Venue</h2>
+				<div class= "card-body">
+					<form th:action="@{/addvenue}" th:object="${venues}" method="post">
+						<div class="formdata">
+							<label>Venue Name</label>
+							<input 
+								type="text" 
+								name="venue_name" required
+								th:field="*{venueName}"
+								class="form-control"
+								placeholder="Enter venue name">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+<input type="submit" value="Submit">
+</body>
+</html>

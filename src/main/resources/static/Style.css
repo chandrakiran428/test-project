@@ -1,0 +1,86 @@
+@charset "ISO-8859-1";
+*{
+   padding: 0;
+   margin: 0;
+   text-decoration:  none;
+   list-style: none;
+   box-sizing: border-box;
+   background-color: white;
+}
+body{
+   font-family: 'Lucida Grande';
+}
+nav{
+   height: 80px;
+   width: 100%;
+   margin-bottom: 200px;
+}
+label.Logo{
+   color: #C0A0C3;
+   font-size: 50px;
+   line-height: 80px;
+   padding: 0 100px;
+   font-weight: bold;
+}
+nav ul{
+   float: right;
+   margin-right: 20px;
+}
+nav ul li{
+   display: inline-block;
+   line-height: 80px;
+   margin: 0 5px;
+}
+nav ul li a{
+   color: #C0A0C3;
+   font-size: 15px;
+   text-transform: uppercase;
+}
+.flex-container{
+   width: 100%;
+   height: auto;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+}
+.flex-box{
+   width: 200px;
+   height: 200px;
+   background: linear-gradient(#dfcae1,#e5dde6);
+   color: #C0A0C3;
+   font-size: 25px;
+   text-align: center;
+   line-height: 200px;
+   border-radius: 40px;
+   margin: 10px;
+}
+/* adding_venue styling */
+body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 20px;
+}
+form {
+   max-width: 500px;
+   margin: 0 auto;
+}
+input[type="text"],
+input[type="number"] {
+   width: 100%;
+   padding: 10px;
+   margin: 5px 0;
+   border-radius: 5px;
+   border: 1px solid #ccc;
+}
+input[type="submit"] {
+   background-color: #4CAF50;
+   color: white;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+}
+input[type="submit"]:hover {
+   background-color: #45a049;
+}
