@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello, World!</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <style>
+    /* Style for fixed sidebar */
+    #sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 200px; /* Adjust width as needed */
+      background-color: #343a40; /* Sidebar background color */
+      padding-top: 56px; /* Adjust padding to accommodate the navbar height */
+      transition: transform 0.3s ease-in-out; /* Smooth transition for collapse effect */
+      z-index: 1000; /* Ensure sidebar is above other content */
+    }
+
+    /* Style for sidebar content */
+    #sidebar-content {
+      padding: 10px;
+      color: white; /* Text color */
+    }
+
+    /* Style for toggle button */
+    .navbar-toggler {
+      position: absolute;
+      top: 10px;
+      left: 10px; /* Adjust position to align with sidebar */
+      z-index: 1001; /* Ensure button is above sidebar */
+    }
+
+    /* Style for centering title in navbar */
+    .navbar-brand.middle {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 24px; /* Adjust font size as needed */
+    }
+
+    /* Style for grid container */
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Adjust number of columns as needed */
+      grid-gap: 20px;
+      padding: 20px;
+      margin-left: 220px; /* Adjust margin to accommodate the sidebar width */
+    }
+
+    /* Style for grid items */
+    .content-item {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-radius: 5px;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    /* Hover effect for grid items */
+    .content-item:hover {
+      background-color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Title in the middle -->
+    <a class="navbar-brand middle" href="#">Event Management System</a>
+  </nav>
+
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <div id="sidebar-content">
+      <!-- Navigation Links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Content Section -->
+  <div class="content-grid">
+    <div class="content-item">
+      <a href="/eventForm" target="_blank">Book My Event</a>
+    </div>
+    <div class="content-item">
+      <a href="https://www.linkedin.com" target="_blank">My Bookings</a>
+    </div>
+    <div class="content-item">
+      <a href="https://www.google.com" target="_blank">Feedback</a>
+    </div>
+    <div class="content-item">
+      <a href="https://www.youtube.com" target="_blank">My Details</a>
+    </div>
+  </div>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Custom JavaScript -->
+  <script>
+    // Add event listener to toggle button
+    document.querySelector('.navbar-toggler').addEventListener('click', function() {
+      // Toggle the sidebar's transform property to collapse/expand it
+      document.getElementById('sidebar').style.transform = document.getElementById('sidebar').style.transform === 'translateX(-100%)' ? 'translateX(0)' : 'translateX(-100%)';
+    });
+  </script>
+</body>
+</html>

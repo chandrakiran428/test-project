@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello, World!</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <!-- Navbar -->
+<nav class="bg-gray-800 py-4">
+  <div class="container mx-auto max-w-screen-xl flex justify-between items-center">
+    <!-- Title in the middle -->
+    <a class="text-white text-2xl font-bold" href="#">Infinite Impressions</a>
+    <!-- Navigation Links -->
+    <ul class="flex items-center space-x-6"> <!-- Modified line -->
+      <li><a href="#" class="text-white hover:text-gray-300">Home</a></li>
+      <li><a href="#" class="text-white hover:text-gray-300">Contact Us</a></li>
+      <li><a href="#" class="text-white hover:text-gray-300">About Us</a></li>
+      <li><a href="#" class="text-white hover:text-gray-300">Services</a></li>
+      <!-- Profile dropdown -->
+      <li class="relative">
+        <button class="text-white hover:text-gray-300 focus:outline-none">
+          Profile
+        </button>
+        <ul class="dropdown-menu absolute hidden bg-gray-800 text-white w-32 mt-2 rounded right-0"> <!-- Modified line -->
+          <li><a href="/editProfile" class="block py-2 px-4 hover:bg-gray-700">My Details</a></li>
+          <li><a href="#" class="block py-2 px-4 hover:bg-gray-700">Logout</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+  <!-- Content Section -->
+  <div class="container mx-auto mt-8">
+    <div class="grid grid-cols-2 gap-8">
+      <div class="bg-gray-200 p-4 rounded">
+        <a href="/eventForm" class="block text-center text-lg font-bold">Book My Event</a>
+      </div>
+      <div class="bg-gray-200 p-4 rounded">
+        <a href="/bookings" class="block text-center text-lg font-bold">My Bookings</a>
+      </div>
+      <div class="bg-gray-200 p-4 rounded">
+        <a href="https://www.google.com" target="_blank" class="block text-center text-lg font-bold">Feedback</a>
+      </div>
+      <div class="bg-gray-200 p-4 rounded">
+        <a href="/editProfile" target="_blank" class="block text-center text-lg font-bold">My Details</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tailwind CSS JavaScript -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Dropdown Toggle Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get all dropdown toggles
+      const dropdownToggles = document.querySelectorAll('.relative');
+
+      // Add event listener to each dropdown toggle
+      dropdownToggles.forEach(dropdownToggle => {
+        dropdownToggle.addEventListener('click', function () {
+          // Toggle the visibility of dropdown menu
+          const dropdownMenu = dropdownToggle.querySelector('.dropdown-menu');
+          dropdownMenu.classList.toggle('hidden');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
