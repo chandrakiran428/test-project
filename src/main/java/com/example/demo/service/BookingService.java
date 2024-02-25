@@ -1,12 +1,12 @@
-package com.example.demo.Service;
+package com.example.demo.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.Entity.Event;
-import com.example.demo.Entity.User;
-import com.example.demo.Repository.CustomerRepository;
-import com.example.demo.Repository.EventRepository;
+import com.example.demo.entity.Event;
+import com.example.demo.entity.User;
+import com.example.demo.repository.CustomerRepository;
+import com.example.demo.repository.EventRepository;
 
 import java.util.List;
 
@@ -22,6 +22,14 @@ public class BookingService {
         return eventRepository.findAll();
     }
     
+    public List<Event> getNewBookings() {
+        return eventRepository.findByStatus("pending");
+    }
+    
+    public List<Event> getBookingHistory() {
+        return eventRepository.findByStatus("done");
+    }
+    /* ------------------------------------------------------------------------ */
     @Autowired
     private CustomerRepository customerRepository;
 

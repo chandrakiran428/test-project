@@ -1,4 +1,4 @@
-package com.example.demo.Entity;
+package com.example.demo.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -24,7 +24,14 @@ public class Event {
     private String foodType;
     private String mealType;
     private String lunchType;
+    private String status;
     
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
 	@Override
 	public String toString() {
 		return "Event [id=" + id + ", name=" + name + ", phoneNumber=" + phoneNumber + ", email=" + email
