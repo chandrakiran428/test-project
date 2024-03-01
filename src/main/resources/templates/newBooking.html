@@ -22,6 +22,7 @@
                     <th>Date</th>
                     <th>Food Type</th>
                     <th>Order Status</th>
+                    <th>Confirm</th>
                 </tr>
             </thead>
             <tbody>
@@ -37,6 +38,13 @@
                     <td th:text="${booking.date}"></td>
                     <td th:text="${booking.foodType}"></td>
                     <td th:text="${booking.status}"></td>
+                    <!-- Confirm column with buttons -->
+                    <td>
+                        <div class="btn-group">
+                            <button class="btn btn-success" onclick="acceptBooking(${booking.id})">Accepted</button>
+                            <button class="btn btn-danger" onclick="rejectBooking(${booking.id})">Rejected</button>
+                        </div>
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -45,5 +53,17 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+        function acceptBooking(bookingId) {
+            // You can implement logic to accept the booking with the given ID
+            console.log("Booking with ID " + bookingId + " accepted.");
+        }
+        
+        function rejectBooking(bookingId) {
+            // You can implement logic to reject the booking with the given ID
+            console.log("Booking with ID " + bookingId + " rejected.");
+        }
+    </script>
 </body>
 </html>
